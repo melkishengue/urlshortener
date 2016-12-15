@@ -5,7 +5,7 @@ if(process.env.TRAVIS && process.argv.indexOf('detached') === -1) {
     child.unref();
     console.log('Spawning detached server');
     setTimeout(() => {
-		console.log('Leaving main process');
+		console.log('Leaving main process server');
 	}, 3000);
 } else {
     const port = 3000;
