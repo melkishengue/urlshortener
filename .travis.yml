@@ -9,3 +9,4 @@ before_script: npm start
 
 # Set environment variables
 env: AUTH=true USER=test PASSWORD=test
+ 
