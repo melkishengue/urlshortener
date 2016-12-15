@@ -4,6 +4,8 @@ language: node_js
 node_js:
   - "6.1.0"
   - "7"
-  - "iojs"
-# Set environment variables 
+
+before_script: npm start
+
+# Set environment variables
 env: AUTH=true USER=test PASSWORD=test
