@@ -1,6 +1,6 @@
 # Define the language environment
 language: node_js
-# Specify the version that shall be used
+# Specify the version that shall be used 
 node_js:
   - "6.1.0"
   - "7"
@@ -9,4 +9,3 @@ before_script: npm start
 
 # Set environment variables
 env: AUTH=true USER=test PASSWORD=test
- 
