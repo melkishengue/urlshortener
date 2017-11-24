@@ -8,6 +8,12 @@ branches:
   only:
     - master
 
+notifications:
+  - email
+    - recipients:
+      - henguemelkispro@yahoo.com
+      - dennis.wolters@upb.de
+
 install: npm install
 
 before_script: npm start
