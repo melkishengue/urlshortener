@@ -12,10 +12,6 @@ install: npm install
 
 before_script: npm start
 
-script:
-  - npm run lint
-  - npm test
-
 # Set environment variables
 env:
   - AUTH=true USER=test PASSWORD=test
