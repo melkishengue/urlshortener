@@ -15,7 +15,7 @@ notifications:
 
 install: npm install
 
-before_script: npm start
+before_script: npm starts
 
 # Set environment variables
 env:
