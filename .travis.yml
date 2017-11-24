@@ -17,4 +17,10 @@ script:
   - npm test
 
 # Set environment variables
-#env: AUTH=true USER=test PASSWORD=test
+env:
+  - AUTH=true USER=test PASSWORD=test
+  - AUTH=false
+
+script:
+  - npm run lint
+  - npm test
