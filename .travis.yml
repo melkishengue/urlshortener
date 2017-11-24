@@ -2,14 +2,19 @@
 language: node_js
 # Specify the version that shall be used
 node_js:
-  - "6.1.0"
   - "7"
 
 branches:
   only:
     - master
 
+install: npm install
+
 before_script: npm start
 
+script:
+  - npm run lint
+  - npm test
+
 # Set environment variables
-env: AUTH=true USER=test PASSWORD=test
+#env: AUTH=true USER=test PASSWORD=test
