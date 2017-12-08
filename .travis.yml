@@ -17,15 +17,16 @@ notifications:
 
 install: npm install
 
-before_install:
-  - docker build -t urlshortener .
-  - docker run -d -p 3000:3000 urlshortener
-  - docker ps
-
 # Set environment variables
 env:
   - AUTH=true USER=test PASSWORD=test
   - AUTH=false
+
+before_install:
+  - docker build -t urlshortener .
+  - docker run -d -p 3000:3000 urlshortener -e AUTH=$AUTH -e USER=$USER \
+    -e PASSWORD=$PASSWORD --name testconn1 urlshortener
+  - docker ps
 
 script:
   - npm run lint

@@ -1,0 +1,11 @@
+Dockerfile
+
+*.log
+
+node_modules
+
+tests/*
+
+.*
+
+data/*
