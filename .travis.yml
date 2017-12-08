@@ -14,12 +14,12 @@ branches:
 notifications:
   email:
     - henguemelkispro@yahoo.com
-    
+
 install: npm install
 
 before_install:
   - docker build -t urlshortener .
-  - docker run -d -p 3000:3000
+  - docker run -d -p 3000:3000 urlshortener
   - docker ps
 
 # Set environment variables
