@@ -16,7 +16,7 @@ ENV NODE_ENV production
 
 EXPOSE 3000
 
-VOLUME []
+# VOLUME . [/var/www/data]
 
 RUN npm install
 
