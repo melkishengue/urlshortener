@@ -1,12 +1,9 @@
 # Define the language environment
 language: node_js
-# for Docker
-sudo: required
-services:
-  - docker
 # Specify the version that shall be used
 node_js:
   - "7"
+
 branches:
   only:
     - master
@@ -14,13 +11,11 @@ branches:
 notifications:
   email:
     - henguemelkispro@yahoo.com
-    
+    - dennis.wolters@upb.de
+
 install: npm install
 
-before_install:
-  - docker build -t urlshortener .
-  - docker run -d -p 3000:3000
-  - docker ps
+before_script: npm start
 
 # Set environment variables
 env:
