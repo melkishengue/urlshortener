@@ -24,8 +24,7 @@ env:
 
 before_install:
   - docker build -t urlshortener .
-  - docker run -d -p 3000:3000 urlshortener -e AUTH=$AUTH -e USER=$USER \
-    -e PASSWORD=$PASSWORD --name testconn1 urlshortener
+  - docker run -d -p 3000:3000 urlshortener -e AUTH=$AUTH -e USER=$USER  -e PASSWORD=$PASSWORD --name testconn1 urlshortener
   - docker ps
 
 script:
