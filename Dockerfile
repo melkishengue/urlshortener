@@ -9,19 +9,19 @@ RUN mkdir /var/www
 WORKDIR /var/www
 
 # first copy package.json to have a better layered image: Node + package.json + dependencies + app
-COPY ./package*.json /var/www
+COPY ./package*.json /var/www/
 
 # set env to production
 ENV NODE_ENV production
 
 EXPOSE 3000
 
-# VOLUME . [/var/www/data]
+VOLUME ["/var/www/data"]
 
 RUN npm install
 
 # except those in the .dockerfile
-COPY . /var/www
+COPY . /var/www/
 
 # default command executed when we start the container
 CMD ["npm", "start"]
